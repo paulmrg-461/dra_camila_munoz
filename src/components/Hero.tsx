@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, Facebook, Twitter, Instagram, MessageCircle } from 'lucide-react';
+import { Mail, Instagram, MessageCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Download size={18} />
+              <ArrowRight size={18} />
               <span>{t('hero.downloadCV')}</span>
             </motion.button>
           </motion.div>

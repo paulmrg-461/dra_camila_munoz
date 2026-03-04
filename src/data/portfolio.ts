@@ -1,5 +1,5 @@
 import { Project, Service, Skill, Client } from '../types';
-import { Sparkles, Smile, Syringe, Zap, UserCheck, HeartPulse } from 'lucide-react';
+import { UserCheck } from 'lucide-react';
 
 type ProjectData = Omit<Project, 'title' | 'description'> & {
   slug: string;

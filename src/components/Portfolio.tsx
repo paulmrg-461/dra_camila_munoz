@@ -11,9 +11,9 @@ const Portfolio: React.FC = () => {
 
   const filters = [
     { id: 'all', label: t('portfolio.allProjects') },
-    { id: 'facial', label: t('portfolio.webApps') },
-    { id: 'labios', label: t('portfolio.mobileApps') },
-    { id: 'antiaging', label: t('portfolio.fullStack') }
+    { id: 'facial', label: t('portfolio.facial') },
+    { id: 'labios', label: t('portfolio.labios') },
+    { id: 'antiaging', label: t('portfolio.antiaging') }
   ];
 
   const allProjects = getProjects(t);
@@ -70,7 +70,7 @@ const Portfolio: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Ver Resultado</span>
+              <span>{t('portfolio.viewCase')}</span>
               <ExternalLink size={16} />
             </motion.a>
           )}

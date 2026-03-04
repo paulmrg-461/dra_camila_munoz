@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { skills } from '../data/portfolio';
+import { credentials } from '../data/portfolio';
 import { useLanguage } from '../contexts/LanguageContext';
+import { GraduationCap, Award, Heart } from 'lucide-react';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
@@ -18,40 +19,34 @@ const About: React.FC = () => {
   };
 
   const itemVariants: Variants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring' as const,
+        type: 'spring',
         stiffness: 100,
         damping: 10
       }
     }
   };
 
-  const skillCategories = {
-    procedimientos: skills.filter(skill => skill.category === 'procedimientos'),
-    valores: skills.filter(skill => skill.category === 'valores')
-  };
+  const academicCredentials = credentials.filter(c => c.category === 'academic' || c.category === 'certification');
+  const values = credentials.filter(c => c.category === 'value');
 
-  const SkillBar: React.FC<{ skill: typeof skills[0] }> = ({ skill }) => (
+  const CredentialCard: React.FC<{ credential: typeof credentials[0] }> = ({ credential }) => (
     <motion.div
-      className="mb-6"
+      className="mb-4 flex items-start gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 hover:border-gold-300 dark:hover:border-gold-700 transition-colors"
       variants={itemVariants}
     >
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 font-heading tracking-wide">{skill.name}</span>
-        <span className="text-sm text-gold-600 dark:text-gold-400 font-semibold">{skill.level}%</span>
+      <div className="p-2 bg-gold-100 dark:bg-gold-900/30 rounded-lg text-gold-600 dark:text-gold-400">
+        {credential.category === 'academic' ? <GraduationCap size={20} /> : 
+         credential.category === 'certification' ? <Award size={20} /> : <Heart size={20} />}
       </div>
-      <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
-        <motion.div
-          className="bg-gradient-to-r from-gold-500 to-gold-600 h-2 rounded-full"
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          viewport={{ once: true }}
-        />
+      <div>
+        <h5 className="font-semibold text-gray-900 dark:text-white font-heading">{credential.title}</h5>
+        <p className="text-sm text-gray-600 dark:text-gray-400">{credential.institution}</p>
+        {credential.year && <span className="text-xs text-gold-500 font-medium mt-1 block">{credential.year}</span>}
       </div>
     </motion.div>
   );
@@ -69,9 +64,9 @@ const About: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={itemVariants}
-              className="relative"
+              className="relative order-2 lg:order-1"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-100 to-gold-200 dark:from-gold-900/20 dark:to-gold-800/20 rounded-3xl transform rotate-3 scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-100 to-gold-200 dark:from-gold-900/20 dark:to-gold-800/20 rounded-3xl transform -rotate-3 scale-105" />
               <motion.img
                 src="/about.jpeg"
                 alt="Dra. Camila Muñoz"
@@ -89,7 +84,7 @@ const About: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-8">
+            <motion.div variants={itemVariants} className="space-y-8 order-1 lg:order-2">
               <div>
                 <motion.h2 
                   className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
@@ -111,25 +106,31 @@ const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8 mt-12">
+              <div className="grid sm:grid-cols-1 gap-6 mt-8">
                 <div>
                   <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <span className="w-8 h-1 bg-gold-500 rounded-full"></span>
                     {t('about.specialization')}
                   </h4>
-                  {skillCategories.procedimientos.map((skill) => (
-                    <SkillBar key={skill.name} skill={skill} />
-                  ))}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                     {academicCredentials.map((cred) => (
+                        <CredentialCard key={cred.id} credential={cred} />
+                     ))}
+                  </div>
                 </div>
 
-                <div>
-                  <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <div className="pt-6 border-t border-gray-100 dark:border-gray-800">
+                   <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <span className="w-8 h-1 bg-gold-600 rounded-full"></span>
                     {t('about.values')}
                   </h4>
-                  {skillCategories.valores.map((skill) => (
-                    <SkillBar key={skill.name} skill={skill} />
-                  ))}
+                   <div className="flex flex-wrap gap-4">
+                      {values.map((val) => (
+                        <span key={val.id} className="px-4 py-2 bg-gold-50 dark:bg-gold-900/20 text-gold-700 dark:text-gold-300 rounded-full text-sm font-medium border border-gold-100 dark:border-gold-800/30">
+                           {val.title}
+                        </span>
+                      ))}
+                   </div>
                 </div>
               </div>
 

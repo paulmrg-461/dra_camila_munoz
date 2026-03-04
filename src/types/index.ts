@@ -7,7 +7,6 @@ export interface Project {
   image: string;
   technologies: string[];
   liveUrl?: string;
-  githubUrl?: string;
   category: string;
 }
 
@@ -19,15 +18,18 @@ export interface Service {
   features: string[];
 }
 
-export interface Skill {
-  name: string;
-  level: number;
-  category: string;
+export interface Credential {
+  id: string;
+  title: string;
+  institution: string;
+  year?: string;
+  category: 'academic' | 'certification' | 'value';
 }
 
 export interface ContactFormData {
   name: string;
   email: string;
+  phone: string;
   subject: string;
   message: string;
 }

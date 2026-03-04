@@ -35,6 +35,7 @@ describe('Contact Component', () => {
 
     expect(screen.getByLabelText(/Nombre Completo/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Email/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Teléfono/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Tratamiento de Interés/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Cuéntame tus dudas.../i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Enviar Consulta/i })).toBeInTheDocument();

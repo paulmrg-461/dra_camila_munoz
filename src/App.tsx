@@ -28,8 +28,8 @@ function App() {
                 <Suspense fallback={<LoadingSpinner />}>
                   <Hero />
                   <About />
-                  <Portfolio />
                   <Services />
+                  <Portfolio />
                   <Clients />
                   <Contact />
                 </Suspense>

@@ -29,7 +29,7 @@ const translations = {
     'nav.contact': 'Contacto',
     
     // Hero Section
-    'hero.title': 'Hola, soy Dra. Camila Muñoz',
+    'hero.title': 'Dra. Camila Muñoz',
     'hero.subtitle': 'Especialista en Armonización Orofacial',
     'hero.technologies': 'Botox • Ácido Hialurónico • Rinomodelación • Labios Rusos • Bioestimuladores',
     'hero.description': 'Transformo rostros realzando tu belleza natural mediante técnicas avanzadas de armonización orofacial. Mi enfoque combina ciencia y arte para lograr resultados estéticos, seguros y equilibrados.',
@@ -48,23 +48,19 @@ const translations = {
     'about.description2': 'Mi filosofía se basa en la "Naturalidad Estética", buscando siempre resultados que armonicen con las facciones del paciente sin perder su esencia. Utilizo productos de la más alta calidad y las últimas técnicas del mercado.',
     'about.description3': 'Cada rostro es único, y por ello, cada tratamiento comienza con un análisis facial detallado para diseñar un plan a medida que cumpla con tus expectativas y mejore tu confianza.',
     'about.patientsTreated': 'Pacientes Atendidos',
-    'about.projectsCompleted': 'Pacientes Felices',
+    'about.satisfaction': 'Satisfacción',
     'about.yearsExperience': 'Años de Experiencia',
-    'about.skillsTitle': 'Especialidades',
+    'about.specialization': 'Formación Académica',
     'about.values': 'Valores y Seguridad',
-    'about.frontendMobile': 'Facial',
-    'about.backendDatabase': 'Antienvejecimiento',
-    'about.toolsCloud': 'Tecnología',
-    'about.aiAutomation': 'Seguridad',
     
     // Portfolio Section (Casos)
     'portfolio.title': 'Casos de Éxito',
     'portfolio.subtitle': 'Resultados reales en pacientes reales. Descubre cómo podemos transformar tu rostro manteniendo tu naturalidad.',
     'portfolio.allProjects': 'Todos',
-    'portfolio.webApps': 'Facial',
-    'portfolio.mobileApps': 'Labios',
-    'portfolio.fullStack': 'Rejuvenecimiento',
-    'portfolio.desktopApps': 'Otros',
+    'portfolio.facial': 'Facial',
+    'portfolio.labios': 'Labios',
+    'portfolio.antiaging': 'Rejuvenecimiento',
+    'portfolio.viewCase': 'Ver Caso',
 
     // Projects (Casos)
     'project.case1.title': 'Rinomodelación Sin Cirugía',
@@ -116,16 +112,19 @@ const translations = {
     'contact.letsConnect': 'Contáctame',
     'contact.name': 'Nombre Completo',
     'contact.email': 'Email',
+    'contact.phone': 'Teléfono',
     'contact.subject': 'Tratamiento de Interés',
     'contact.message': 'Cuéntame tus dudas...',
     'contact.sendMessage': 'Enviar Consulta',
     'contact.nameRequired': 'El nombre es requerido',
     'contact.emailRequired': 'El email es requerido',
+    'contact.phoneRequired': 'El teléfono es requerido',
     'contact.emailInvalid': 'Dirección de email inválida',
     'contact.subjectRequired': 'El asunto es requerido',
     'contact.messageRequired': 'El mensaje es requerido',
     'contact.namePlaceholder': 'Tu nombre',
     'contact.emailPlaceholder': 'tu@email.com',
+    'contact.phonePlaceholder': '+56 9 1234 5678',
     'contact.subjectPlaceholder': 'Ej: Rinomodelación',
     'contact.messagePlaceholder': 'Hola Dra., quisiera información sobre...',
     'contact.thankYou': '¡Gracias por tu mensaje! Te responderé pronto.',
@@ -133,9 +132,17 @@ const translations = {
     'contact.errorSending': 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
     
     // Footer
-    'footer.madeWith': 'Hecho con',
-    'footer.by': 'por DevPaul',
-    'footer.rights': '© 2024 Dra. Camila Muñoz. Todos los derechos reservados.'
+    'footer.about': 'Sobre Mí',
+    'footer.links': 'Enlaces Rápidos',
+    'footer.contact': 'Contacto',
+    'footer.follow': 'Sígueme',
+    'footer.address': 'Av. Kennedy 5488, Of 202, Vitacura',
+    'footer.phone': '+56 9 1234 5678',
+    'footer.email': 'contacto@dracamilamunoz.com',
+    'footer.rights': '© 2024 Dra. Camila Muñoz. Todos los derechos reservados.',
+    'footer.schedule': 'Horario',
+    'footer.hours': 'Lunes a Viernes: 9:00 - 19:00',
+    'footer.hoursSat': 'Sábados: 10:00 - 14:00'
   },
   en: {
     // Navigation
@@ -162,25 +169,23 @@ const translations = {
     // About Section
     'about.title': 'About Dr. Camila',
     'about.subtitle': 'Passion for aesthetics and commitment to medical excellence',
-    'about.description1': 'I am a Dentist specializing in Orofacial Harmonization, dedicated to highlighting the natural beauty of my patients. With years of experience and continuous training, I offer safe and personalized treatments.',
+    'about.description1': 'I am a Dentist specialized in Orofacial Harmonization, dedicated to highlighting the natural beauty of my patients. With years of experience and continuous training, I offer safe and personalized treatments.',
     'about.description2': 'My philosophy is based on "Aesthetic Naturalness", always seeking results that harmonize with the patient\'s features without losing their essence. I use the highest quality products and the latest techniques in the market.',
-    'about.description3': 'Each face is unique, and therefore, each treatment begins with a detailed facial analysis to design a tailored plan that meets your expectations and improves your confidence.',
-    'about.projectsCompleted': 'Happy Patients',
+    'about.description3': 'Each face is unique, and therefore, each treatment begins with a detailed facial analysis to design a custom plan that meets your expectations and improves your confidence.',
+    'about.patientsTreated': 'Patients Treated',
+    'about.satisfaction': 'Satisfaction',
     'about.yearsExperience': 'Years Experience',
-    'about.skillsTitle': 'Specialties',
-    'about.frontendMobile': 'Facial',
-    'about.backendDatabase': 'Anti-Aging',
-    'about.toolsCloud': 'Technology',
-    'about.aiAutomation': 'Safety',
-    
+    'about.specialization': 'Academic Credentials',
+    'about.values': 'Values & Safety',
+
     // Portfolio Section (Cases)
     'portfolio.title': 'Success Stories',
     'portfolio.subtitle': 'Real results on real patients. Discover how we can transform your face while maintaining your naturalness.',
     'portfolio.allProjects': 'All',
-    'portfolio.webApps': 'Facial',
-    'portfolio.mobileApps': 'Lips',
-    'portfolio.fullStack': 'Rejuvenation',
-    'portfolio.desktopApps': 'Others',
+    'portfolio.facial': 'Facial',
+    'portfolio.labios': 'Lips',
+    'portfolio.antiaging': 'Rejuvenation',
+    'portfolio.viewCase': 'View Case',
 
     // Projects (Cases)
     'project.case1.title': 'Non-Surgical Rhinomodeling',
@@ -227,31 +232,42 @@ const translations = {
     'clients.patient3.treatment': 'Full Face',
     
     // Contact Section
-    'contact.title': 'Book your Appointment',
+    'contact.title': 'Book Appointment',
     'contact.subtitle': 'Take the first step towards your best version. Write to me to evaluate your case.',
     'contact.letsConnect': 'Contact Me',
     'contact.name': 'Full Name',
     'contact.email': 'Email',
+    'contact.phone': 'Phone',
     'contact.subject': 'Treatment of Interest',
-    'contact.message': 'Tell me your doubts...',
+    'contact.message': 'Tell me your questions...',
     'contact.sendMessage': 'Send Inquiry',
     'contact.nameRequired': 'Name is required',
     'contact.emailRequired': 'Email is required',
+    'contact.phoneRequired': 'Phone is required',
     'contact.emailInvalid': 'Invalid email address',
     'contact.subjectRequired': 'Subject is required',
     'contact.messageRequired': 'Message is required',
-    'contact.namePlaceholder': 'Your name',
+    'contact.namePlaceholder': 'Your Name',
     'contact.emailPlaceholder': 'your@email.com',
+    'contact.phonePlaceholder': '+1 234 567 8900',
     'contact.subjectPlaceholder': 'Ex: Rhinomodeling',
-    'contact.messagePlaceholder': 'Hi Dr., I would like information about...',
-    'contact.thankYou': 'Thanks for your message! I will answer you soon.',
+    'contact.messagePlaceholder': 'Hello Dr., I would like information about...',
+    'contact.thankYou': 'Thanks for your message! I will reply soon.',
     'contact.sending': 'Sending...',
     'contact.errorSending': 'Error sending message. Please try again.',
     
     // Footer
-    'footer.madeWith': 'Made with',
-    'footer.by': 'by DevPaul',
-    'footer.rights': '© 2024 Dr. Camila Muñoz. All rights reserved.'
+    'footer.about': 'About Me',
+    'footer.links': 'Quick Links',
+    'footer.contact': 'Contact',
+    'footer.follow': 'Follow Me',
+    'footer.address': 'Av. Kennedy 5488, Of 202, Vitacura',
+    'footer.phone': '+56 9 1234 5678',
+    'footer.email': 'contact@dracamilamunoz.com',
+    'footer.rights': '© 2024 Dr. Camila Muñoz. All rights reserved.',
+    'footer.schedule': 'Schedule',
+    'footer.hours': 'Monday to Friday: 9:00 - 19:00',
+    'footer.hoursSat': 'Saturdays: 10:00 - 14:00'
   }
 };
 

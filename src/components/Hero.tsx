@@ -53,9 +53,9 @@ const Hero: React.FC = () => {
               variants={itemVariants}
               className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading text-gray-900 dark:text-white mb-6 leading-tight"
             >
-              {t('hero.title').split('Dra. Camila Muñoz')[0]}
+              {t('hero.title').split('Camila Muñoz')[0]}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">
-                Dra. Camila Muñoz
+                Camila Muñoz
               </span>
             </motion.h1>
 

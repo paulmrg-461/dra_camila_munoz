@@ -78,19 +78,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'contacto@dracamilamunoz.com',
-      link: 'mailto:contacto@dracamilamunoz.com'
+      value: t('footer.email'),
+      link: `mailto:${t('footer.email')}`
     },
     {
       icon: Phone,
-      title: 'WhatsApp',
-      value: '+56 9 1234 5678',
-      link: 'https://wa.me/56912345678'
+      title: 'WhatsApp / ' + t('contact.phone'),
+      value: t('footer.phone'),
+      link: `https://wa.me/${t('footer.phone').replace(/\D/g, '')}`
     },
     {
       icon: MapPin,
-      title: 'Ubicación',
-      value: 'Las Condes, Santiago',
+      title: t('footer.address').split(',')[2] || 'Ubicación',
+      value: t('footer.address'),
       link: '#'
     }
   ];
@@ -103,93 +103,105 @@ const Contact: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
-          <motion.div
-            variants={itemVariants}
-            className="text-center mb-20"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-gray-900 dark:text-white">
               {t('contact.title')}
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full mb-6" />
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div
-              variants={itemVariants}
-              className="space-y-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                {t('contact.letsConnect')}
-              </h3>
-              
-              <div className="space-y-6">
-                {contactInfo.map((info) => (
-                  <motion.a
-                    key={info.title}
-                    href={info.link}
-                    className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-transparent hover:border-gold-300 dark:hover:border-gold-700"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-gold-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-                      <info.icon size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900 dark:text-white">{info.title}</p>
-                      <p className="text-gray-600 dark:text-gray-400">{info.value}</p>
-                    </div>
-                  </motion.a>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {contactInfo.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.link}
+                target={item.link.startsWith('http') ? '_blank' : undefined}
+                rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                variants={itemVariants}
+                className="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-gold-300 dark:hover:border-gold-700 transition-all group"
+              >
+                <div className="p-4 bg-white dark:bg-black rounded-full shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                  <item.icon size={24} className="text-gold-500" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-center text-sm">{item.value}</p>
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.div
+            variants={itemVariants}
+            className="bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-800"
+          >
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    {t('contact.name')}
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder={t('contact.namePlaceholder')}
+                    className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-black border ${errors.name ? 'border-red-500' : 'border-gray-200 dark:border-gray-800'} focus:border-gold-500 dark:focus:border-gold-500 focus:ring-2 focus:ring-gold-200 dark:focus:ring-gold-900/20 outline-none transition-all`}
+                    {...register('name', { required: t('contact.nameRequired') })}
+                  />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                      <AlertCircle size={14} />
+                      {errors.name.message}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    {t('contact.email')}
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder={t('contact.emailPlaceholder')}
+                    className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-black border ${errors.email ? 'border-red-500' : 'border-gray-200 dark:border-gray-800'} focus:border-gold-500 dark:focus:border-gold-500 focus:ring-2 focus:ring-gold-200 dark:focus:ring-gold-900/20 outline-none transition-all`}
+                    {...register('email', { 
+                      required: t('contact.emailRequired'),
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: t('contact.emailInvalid')
+                      }
+                    })}
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                      <AlertCircle size={14} />
+                      {errors.email.message}
+                    </p>
+                  )}
+                </div>
               </div>
-            </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800"
-            >
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      {t('contact.name')}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      {...register('name', { required: t('contact.nameRequired') })}
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
-                      placeholder={t('contact.namePlaceholder')}
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      {t('contact.email')}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      {...register('email', {
-                        required: t('contact.emailRequired'),
-                        pattern: {
-                          value: /^\S+@\S+$/i,
-                          message: t('contact.emailInvalid')
-                        }
-                      })}
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
-                      placeholder={t('contact.emailPlaceholder')}
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                    )}
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    {t('contact.phone')}
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder={t('contact.phonePlaceholder')}
+                    className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-black border ${errors.phone ? 'border-red-500' : 'border-gray-200 dark:border-gray-800'} focus:border-gold-500 dark:focus:border-gold-500 focus:ring-2 focus:ring-gold-200 dark:focus:ring-gold-900/20 outline-none transition-all`}
+                    {...register('phone', { required: t('contact.phoneRequired') })}
+                  />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                      <AlertCircle size={14} />
+                      {errors.phone.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -197,16 +209,20 @@ const Contact: React.FC = () => {
                     {t('contact.subject')}
                   </label>
                   <input
-                      type="text"
-                      id="subject"
-                      {...register('subject', { required: t('contact.subjectRequired') })}
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
-                      placeholder={t('contact.subjectPlaceholder')}
-                    />
+                    type="text"
+                    id="subject"
+                    placeholder={t('contact.subjectPlaceholder')}
+                    className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-black border ${errors.subject ? 'border-red-500' : 'border-gray-200 dark:border-gray-800'} focus:border-gold-500 dark:focus:border-gold-500 focus:ring-2 focus:ring-gold-200 dark:focus:ring-gold-900/20 outline-none transition-all`}
+                    {...register('subject', { required: t('contact.subjectRequired') })}
+                  />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
+                    <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                      <AlertCircle size={14} />
+                      {errors.subject.message}
+                    </p>
                   )}
                 </div>
+              </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -269,7 +285,6 @@ const Contact: React.FC = () => {
                 </motion.button>
               </form>
             </motion.div>
-          </div>
         </motion.div>
       </div>
     </section>

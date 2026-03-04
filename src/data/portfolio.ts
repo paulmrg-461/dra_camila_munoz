@@ -69,7 +69,7 @@ export const services: Service[] = [
     id: '4',
     title: 'services.bioestimuladores.title',
     description: 'services.bioestimuladores.description',
-    icon: 'Zap',
+    icon: 'Activity',
     features: ['services.bioestimuladores.feature1', 'services.bioestimuladores.feature2']
   }
 ];

@@ -96,23 +96,24 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
+    <section id="contact" className="py-24 bg-white dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           <motion.div
             variants={itemVariants}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               {t('contact.title')}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full mb-6" />
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
           </motion.div>
@@ -131,10 +132,10 @@ const Contact: React.FC = () => {
                   <motion.a
                     key={info.title}
                     href={info.link}
-                    className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
+                    className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-transparent hover:border-gold-300 dark:hover:border-gold-700"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-gold-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
                       <info.icon size={24} className="text-white" />
                     </div>
                     <div>
@@ -148,7 +149,7 @@ const Contact: React.FC = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg"
+              className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800"
             >
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -160,7 +161,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="name"
                       {...register('name', { required: t('contact.nameRequired') })}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
                       placeholder={t('contact.namePlaceholder')}
                     />
                     {errors.name && (
@@ -182,7 +183,7 @@ const Contact: React.FC = () => {
                           message: t('contact.emailInvalid')
                         }
                       })}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
                       placeholder={t('contact.emailPlaceholder')}
                     />
                     {errors.email && (
@@ -199,7 +200,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="subject"
                       {...register('subject', { required: t('contact.subjectRequired') })}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white transition-shadow"
                       placeholder={t('contact.subjectPlaceholder')}
                     />
                   {errors.subject && (
@@ -215,7 +216,7 @@ const Contact: React.FC = () => {
                     id="message"
                     rows={5}
                     {...register('message', { required: t('contact.messageRequired') })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
+                    className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white resize-none transition-shadow"
                     placeholder={t('contact.messagePlaceholder')}
                   />
                   {errors.message && (
@@ -228,10 +229,10 @@ const Contact: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`p-4 rounded-lg flex items-center space-x-2 ${
+                    className={`p-4 rounded-xl flex items-center space-x-2 ${
                       submitStatus.type === 'success'
-                        ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
-                        : 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
+                        ? 'bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800'
+                        : 'bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800'
                     }`}
                   >
                     {submitStatus.type === 'success' ? (
@@ -246,11 +247,11 @@ const Contact: React.FC = () => {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
+                  className={`w-full px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg ${
                     isSubmitting
                       ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-primary-600 to-gold-600 hover:shadow-lg hover:from-primary-700 hover:to-gold-700'
-                  } text-white`}
+                      : 'bg-gradient-to-r from-gold-500 to-gold-700 hover:shadow-xl hover:from-gold-600 hover:to-gold-800 text-white'
+                  }`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >

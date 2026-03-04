@@ -36,69 +36,68 @@ const Clients: React.FC = () => {
     return (
       <motion.div
         variants={itemVariants}
-        className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
-        whileHover={{ y: -5, scale: 1.02 }}
+        className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:border-gold-300 dark:hover:border-gold-700 relative"
+        whileHover={{ y: -5 }}
       >
-        <div className="flex items-center space-x-4 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <IconComponent size={24} className="text-white" />
+        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+           <IconComponent size={64} className="text-gold-500" />
+        </div>
+        
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+             <span className="text-white font-bold text-xl">{client.name.charAt(0)}</span>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+            <h3 className="text-lg font-bold font-heading text-gray-900 dark:text-white">
               {client.name}
             </h3>
-            <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
+            <span className="text-sm text-gold-600 dark:text-gold-400 font-medium">
               {client.category}
             </span>
           </div>
         </div>
         
-        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-          {client.description}
+        <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed relative z-10">
+          "{client.description}"
         </p>
       </motion.div>
     );
   };
 
   return (
-    <section id="clients" className="py-20 bg-white dark:bg-gray-800">
+    <section id="clients" className="py-24 bg-white dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          viewport={{ once: true, margin: "-100px" }}
+          className="max-w-7xl mx-auto"
         >
-          <motion.div
-            variants={itemVariants}
-            className="text-center mb-4"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-16">
+            <motion.h2 
+              className="text-3xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+              variants={itemVariants}
+            >
               {t('clients.title')}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.div 
+              variants={itemVariants}
+              className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full mb-6" 
+            />
+            <motion.p 
+              className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              variants={itemVariants}
+            >
               {t('clients.subtitle')}
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {clients.map((client) => (
               <ClientCard key={client.id} client={client} />
             ))}
           </div>
-
-          {/* <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
-          >
-            <div className="inline-flex items-center space-x-2 bg-primary-50 dark:bg-primary-900/20 px-6 py-3 rounded-full">
-              <Building2 size={20} className="text-primary-600 dark:text-primary-400" />
-              <span className="text-primary-700 dark:text-primary-300 font-medium">
-                {t('clients.trustedBy')}
-              </span>
-            </div>
-          </motion.div> */}
         </motion.div>
       </div>
     </section>

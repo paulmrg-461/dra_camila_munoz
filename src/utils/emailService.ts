@@ -7,8 +7,8 @@ interface EmailResponse {
 
 export const sendEmail = async (formData: ContactFormData): Promise<EmailResponse> => {
   try {
-    const isProd = (import.meta as any).env?.MODE === 'production';
-    const apiBase = isProd ? '' : ((import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:3001');
+    const isProd = import.meta.env.MODE === 'production';
+    const apiBase = isProd ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001');
 
     const response = await fetch(`${apiBase}/api/send-email`, {
       method: 'POST',

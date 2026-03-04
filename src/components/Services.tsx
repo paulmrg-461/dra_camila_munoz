@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Smile, Syringe, Zap } from 'lucide-react';
+import { Sparkles, Smile, Syringe, Activity } from 'lucide-react';
 import { services } from '../data/portfolio';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -11,7 +11,7 @@ const Services: React.FC = () => {
     Sparkles,
     Smile,
     Syringe,
-    Zap
+    Activity
   };
 
   const containerVariants = {
@@ -44,25 +44,27 @@ const Services: React.FC = () => {
     return (
       <motion.div
         variants={itemVariants}
-        className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+        className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:border-gold-400 dark:hover:border-gold-500 relative overflow-hidden"
         whileHover={{ y: -5 }}
       >
-        <div className="mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-gold-400 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        <div className="mb-6 relative z-10">
+          <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
             <IconComponent size={32} className="text-white" />
           </div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
             {t(service.title)}
           </h3>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             {t(service.description)}
           </p>
         </div>
         
-        <ul className="space-y-2">
+        <ul className="space-y-3 relative z-10">
           {service.features.map((feature, index) => (
             <li key={index} className="flex items-center text-gray-700 dark:text-gray-300">
-              <div className="w-2 h-2 bg-gold-500 rounded-full mr-3"></div>
+              <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mr-3"></div>
               {t(feature)}
             </li>
           ))}
@@ -72,23 +74,24 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="services" className="py-24 bg-gray-50 dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           <motion.div
             variants={itemVariants}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               {t('services.title')}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full mb-6" />
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {t('services.subtitle')}
             </p>
           </motion.div>

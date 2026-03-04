@@ -30,9 +30,19 @@ export default {
           900: '#3d3d3d',
         },
         gold: {
-            500: '#D4AF37',
-            600: '#C5A028',
-        }
+            50: '#FDFBF4',
+            100: '#F9F1D8',
+            200: '#F0E3B6',
+            300: '#E6D494',
+            400: '#DCC672',
+            500: '#D4AF37', // Classic Gold
+            600: '#AA8C2C',
+            700: '#806921',
+            800: '#5E4D18',
+            900: '#3F3310',
+        },
+        black: '#000000',
+        // fuchsia removed as per user request for "similar tones"
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],

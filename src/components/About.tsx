@@ -41,12 +41,12 @@ const About: React.FC = () => {
       variants={itemVariants}
     >
       <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-        <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 font-heading tracking-wide">{skill.name}</span>
+        <span className="text-sm text-gold-600 dark:text-gold-400 font-semibold">{skill.level}%</span>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
         <motion.div
-          className="bg-gradient-to-r from-gold-600 to-gold-400 h-2 rounded-full"
+          className="bg-gradient-to-r from-gold-500 to-gold-600 h-2 rounded-full"
           initial={{ width: 0 }}
           whileInView={{ width: `${skill.level}%` }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -57,88 +57,95 @@ const About: React.FC = () => {
   );
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-24 bg-white dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          viewport={{ once: true, margin: "-100px" }}
+          className="max-w-7xl mx-auto"
         >
-          <motion.div
-            variants={itemVariants}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('about.title')}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {t('about.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={itemVariants}
-              className="space-y-6"
+              className="relative"
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-100 to-gold-200 dark:from-gold-900/20 dark:to-gold-800/20 rounded-3xl transform rotate-3 scale-105" />
               <motion.img
-                src="/logo_light.jpeg"
+                src="/about.jpeg"
                 alt="Dra. Camila Muñoz"
-                className="w-56 h-56 rounded-full mx-auto mb-8 object-cover border-4 border-white dark:border-gray-800 shadow-xl"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="relative w-full h-[600px] object-cover rounded-3xl shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.5 }}
               />
-              <div className="prose prose-lg dark:prose-invert">
-                <p className="text-gray-700 dark:text-gray-300">
-                  {t('about.description1')}
-                </p>
-                
-                <p className="text-gray-700 dark:text-gray-300 mt-4">
-                  {t('about.description2')}
-                </p>
-                
-                <p className="text-gray-700 dark:text-gray-300 mt-4">
-                  {t('about.description3')}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h4 className="text-2xl font-bold text-gold-600 dark:text-gold-400 mb-2">500+</h4>
-                  <p className="text-gray-600 dark:text-gray-400">{t('about.patientsTreated')}</p>
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 max-w-xs">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-600 to-gold-400 mb-2">
+                  +5
                 </div>
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h4 className="text-2xl font-bold text-gold-600 dark:text-gold-400 mb-2">5+</h4>
-                  <p className="text-gray-600 dark:text-gray-400">{t('about.yearsExperience')}</p>
+                <div className="text-gray-600 dark:text-gray-400 font-medium">
+                  {t('about.yearsExperience')}
                 </div>
               </div>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="space-y-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                {t('about.skillsTitle')}
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div variants={itemVariants} className="space-y-8">
+              <div>
+                <motion.h2 
+                  className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+                  variants={itemVariants}
+                >
+                  {t('about.title')}
+                  <span className="block text-2xl md:text-3xl text-gold-600 dark:text-gold-500 mt-2 font-light">
+                    {t('about.subtitle')}
+                  </span>
+                </motion.h2>
+                
+                <div className="prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="mb-4">
+                    {t('about.description1')}
+                  </p>
+                  <p>
+                    {t('about.description2')}
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8 mt-12">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.skillsTitle')}</h4>
+                  <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="w-8 h-1 bg-gold-500 rounded-full"></span>
+                    {t('about.specialization')}
+                  </h4>
                   {skillCategories.procedimientos.map((skill) => (
                     <SkillBar key={skill.name} skill={skill} />
                   ))}
                 </div>
-                
+
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.values')}</h4>
+                  <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="w-8 h-1 bg-gold-600 rounded-full"></span>
+                    {t('about.values')}
+                  </h4>
                   {skillCategories.valores.map((skill) => (
                     <SkillBar key={skill.name} skill={skill} />
                   ))}
                 </div>
               </div>
+
+              <motion.div 
+                className="pt-8 flex gap-8 border-t border-gray-100 dark:border-gray-800"
+                variants={itemVariants}
+              >
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">+1000</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{t('about.patientsTreated')}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">100%</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{t('about.satisfaction')}</div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </motion.div>

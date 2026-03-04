@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import { ExternalLink, Filter } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { getProjects } from '../data/portfolio';
 import { useLanguage } from '../contexts/LanguageContext';
 import type { Project } from '../types';
@@ -47,42 +47,41 @@ const Portfolio: React.FC = () => {
 
   const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
     <motion.div
-      variants={itemVariants as Variants}
+      variants={itemVariants}
       layout
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden group"
+      className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden group border border-gray-100 dark:border-gray-800 hover:border-gold-300 dark:hover:border-gold-700 transition-colors relative"
       whileHover={{ y: -5 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
-      <div className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      <div className="relative overflow-hidden aspect-[4/3]">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="absolute bottom-4 left-4 right-4 flex justify-between">
-            {project.liveUrl && (
-              <motion.a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors font-medium"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ExternalLink size={18} />
-                <span>Ver Caso</span>
-              </motion.a>
-            )}
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          {project.liveUrl && (
+            <motion.a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-gold-500 to-gold-700 text-white rounded-full hover:shadow-lg transition-all font-medium w-full justify-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>Ver Resultado</span>
+              <ExternalLink size={16} />
+            </motion.a>
+          )}
         </div>
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-xl font-bold font-heading text-gray-900 dark:text-white mb-2 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
           {project.title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
           {project.description}
         </p>
         
@@ -90,7 +89,7 @@ const Portfolio: React.FC = () => {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 text-sm rounded-full"
+              className="px-3 py-1 bg-gold-50 dark:bg-black text-gold-700 dark:text-gold-400 text-xs font-medium rounded-full border border-gold-100 dark:border-gray-700"
             >
               {tech}
             </span>
@@ -101,46 +100,50 @@ const Portfolio: React.FC = () => {
   );
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-gray-800">
+    <section id="portfolio" className="py-24 bg-gray-50 dark:bg-black transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          viewport={{ once: true, margin: "-100px" }}
+          className="max-w-7xl mx-auto"
         >
-          <motion.div
-            variants={itemVariants}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-16">
+            <motion.h2 
+              className="text-3xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+              variants={itemVariants}
+            >
               {t('portfolio.title')}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.div 
+              variants={itemVariants}
+              className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto rounded-full mb-6" 
+            />
+            <motion.p 
+              className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              variants={itemVariants}
+            >
               {t('portfolio.subtitle')}
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-4 mb-16"
           >
             {filters.map((filter) => (
-              <motion.button
+              <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 border ${
                   activeFilter === filter.id
-                    ? 'bg-primary-600 text-white shadow-lg'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                    ? 'bg-gradient-to-r from-gold-500 to-gold-700 text-white border-transparent shadow-lg'
+                    : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-800 hover:border-gold-300 dark:hover:border-gold-700'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
-                <Filter size={16} className="inline mr-2" />
                 {filter.label}
-              </motion.button>
+              </button>
             ))}
           </motion.div>
 

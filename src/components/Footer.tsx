@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center justify-center space-y-6">
             <motion.button
               onClick={scrollToTop}
-              className="p-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors"
+              className="p-3 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 rounded-full text-white shadow-lg transition-all"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -30,12 +30,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <p className="text-gray-300 mb-4">
-                {t('footer.madeWith')}{' '}
-                <Heart className="inline-block w-5 h-5 text-red-500 mx-1" />{' '}
-                {t('footer.by')}
-              </p>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-400 text-sm">
                 {t('footer.rights')}
               </p>
             </motion.div>

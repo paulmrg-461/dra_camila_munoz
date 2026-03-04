@@ -78,19 +78,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'co.devpaul@gmail.com',
-      link: 'mailto:co.devpaul@gmail.com'
+      value: 'contacto@dracamilamunoz.com',
+      link: 'mailto:contacto@dracamilamunoz.com'
     },
     {
       icon: Phone,
-      title: 'Phone',
-      value: '+57 301 349 5689',
-      link: 'tel:+573013495689'
+      title: 'WhatsApp',
+      value: '+56 9 1234 5678',
+      link: 'https://wa.me/56912345678'
     },
     {
       icon: MapPin,
-      title: 'Location',
-      value: 'Popayán, Cauca, Colombia',
+      title: 'Ubicación',
+      value: 'Las Condes, Santiago',
       link: '#'
     }
   ];
@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
                     className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors group"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <info.icon size={24} className="text-white" />
                     </div>
                     <div>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="name"
                       {...register('name', { required: t('contact.nameRequired') })}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                       placeholder={t('contact.namePlaceholder')}
                     />
                     {errors.name && (
@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
                           message: t('contact.emailInvalid')
                         }
                       })}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                       placeholder={t('contact.emailPlaceholder')}
                     />
                     {errors.email && (
@@ -196,12 +196,12 @@ const Contact: React.FC = () => {
                     {t('contact.subject')}
                   </label>
                   <input
-                    type="text"
-                    id="subject"
-                    {...register('subject', { required: t('contact.subjectRequired') })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                    placeholder={t('contact.subjectPlaceholder')}
-                  />
+                      type="text"
+                      id="subject"
+                      {...register('subject', { required: t('contact.subjectRequired') })}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      placeholder={t('contact.subjectPlaceholder')}
+                    />
                   {errors.subject && (
                     <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
                   )}
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                     id="message"
                     rows={5}
                     {...register('message', { required: t('contact.messageRequired') })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
                     placeholder={t('contact.messagePlaceholder')}
                   />
                   {errors.message && (
@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
                   className={`w-full px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                     isSubmitting
                       ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg'
+                      : 'bg-gradient-to-r from-primary-600 to-gold-600 hover:shadow-lg hover:from-primary-700 hover:to-gold-700'
                   } text-white`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}

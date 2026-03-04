@@ -31,10 +31,8 @@ const About: React.FC = () => {
   };
 
   const skillCategories = {
-    frontend: skills.filter(skill => skill.category === 'frontend'),
-    backend: skills.filter(skill => skill.category === 'backend'),
-    tools: skills.filter(skill => skill.category === 'tools'),
-    design: skills.filter(skill => skill.category === 'design')
+    procedimientos: skills.filter(skill => skill.category === 'procedimientos'),
+    valores: skills.filter(skill => skill.category === 'valores')
   };
 
   const SkillBar: React.FC<{ skill: typeof skills[0] }> = ({ skill }) => (
@@ -48,7 +46,7 @@ const About: React.FC = () => {
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <motion.div
-          className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
+          className="bg-gradient-to-r from-gold-600 to-gold-400 h-2 rounded-full"
           initial={{ width: 0 }}
           whileInView={{ width: `${skill.level}%` }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -86,8 +84,8 @@ const About: React.FC = () => {
               className="space-y-6"
             >
               <motion.img
-                src="/capybara.png"
-                alt="DevPaul Capybara"
+                src="/logo_light.jpeg"
+                alt="Dra. Camila Muñoz"
                 className="w-56 h-56 rounded-full mx-auto mb-8 object-cover border-4 border-white dark:border-gray-800 shadow-xl"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -108,11 +106,11 @@ const About: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h4 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</h4>
-                  <p className="text-gray-600 dark:text-gray-400">{t('about.projectsCompleted')}</p>
+                  <h4 className="text-2xl font-bold text-gold-600 dark:text-gold-400 mb-2">500+</h4>
+                  <p className="text-gray-600 dark:text-gray-400">{t('about.patientsTreated')}</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                  <h4 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</h4>
+                  <h4 className="text-2xl font-bold text-gold-600 dark:text-gold-400 mb-2">5+</h4>
                   <p className="text-gray-600 dark:text-gray-400">{t('about.yearsExperience')}</p>
                 </div>
               </div>
@@ -128,29 +126,15 @@ const About: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.frontendMobile')}</h4>
-                  {skillCategories.frontend.map((skill) => (
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.skillsTitle')}</h4>
+                  {skillCategories.procedimientos.map((skill) => (
                     <SkillBar key={skill.name} skill={skill} />
                   ))}
                 </div>
                 
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.backendDatabase')}</h4>
-                  {skillCategories.backend.map((skill) => (
-                    <SkillBar key={skill.name} skill={skill} />
-                  ))}
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.toolsCloud')}</h4>
-                  {skillCategories.tools.map((skill) => (
-                    <SkillBar key={skill.name} skill={skill} />
-                  ))}
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.aiAutomation')}</h4>
-                  {skillCategories.design.map((skill) => (
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">{t('about.values')}</h4>
+                  {skillCategories.valores.map((skill) => (
                     <SkillBar key={skill.name} skill={skill} />
                   ))}
                 </div>

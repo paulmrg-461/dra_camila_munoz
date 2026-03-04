@@ -7,13 +7,9 @@ const Hero: React.FC = () => {
   const { t } = useLanguage();
   
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/paulmrg-461', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/paul-realpe-631b17a6', label: 'LinkedIn' },
-    { icon: Facebook, href: 'https://www.facebook.com/devpaul.co', label: 'Facebook' },
-    { icon: Twitter, href: 'https://x.com/devpaul_co', label: 'Twitter' },
-    { icon: Instagram, href: 'https://www.instagram.com/devpaul_co', label: 'Instagram' },
-    { icon: Mail, href: 'mailto:co.devpaul@gmail.com', label: 'Email' },
-    { icon: MessageCircle, href: 'https://wa.me/573043162313', label: 'WhatsApp' }
+    { icon: Instagram, href: 'https://www.instagram.com/dracamilamunoz', label: 'Instagram' },
+    { icon: MessageCircle, href: 'https://wa.me/573000000000', label: 'WhatsApp' },
+    { icon: Mail, href: 'mailto:contacto@dracamilamunoz.com', label: 'Email' }
   ];
 
   const containerVariants: Variants = {
@@ -55,14 +51,14 @@ const Hero: React.FC = () => {
           >
             <div className="relative inline-block">
               <motion.img
-                src="/paul.jpeg"
-                alt="Paul Realpe"
+                src="/logo_light.jpeg"
+                alt="Dra. Camila Muñoz"
                 className="w-40 h-40 rounded-full mx-auto mb-0 mt-20 object-cover border-4 border-white dark:border-gray-800 shadow-xl"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               />
               <motion.div
-                className="absolute -bottom-1 -right-1 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-800"
+                className="absolute -bottom-1 -right-1 w-8 h-8 bg-gold-500 rounded-full border-4 border-white dark:border-gray-800"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
@@ -73,9 +69,9 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4"
           >
-            {t('hero.title').split('Paul Realpe')[0]}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Paul Realpe
+            {t('hero.title').split('Dra. Camila Muñoz')[0]}{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-400">
+              Dra. Camila Muñoz
             </span>
           </motion.h1>
 
@@ -88,7 +84,7 @@ const Hero: React.FC = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-blue-600 dark:text-blue-400 mb-8 font-medium"
+            className="text-lg text-gold-600 dark:text-gold-500 mb-8 font-medium"
           >
             {t('hero.technologies')}
           </motion.p>

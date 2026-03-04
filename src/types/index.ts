@@ -8,7 +8,7 @@ export interface Project {
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
-  category: 'web' | 'mobile' | 'desktop' | 'fullstack';
+  category: string;
 }
 
 export interface Service {
@@ -22,7 +22,7 @@ export interface Service {
 export interface Skill {
   name: string;
   level: number;
-  category: 'frontend' | 'backend' | 'tools' | 'design';
+  category: string;
 }
 
 export interface ContactFormData {

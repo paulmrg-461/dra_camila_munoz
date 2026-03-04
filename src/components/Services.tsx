@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Smartphone, Building2, Bot } from 'lucide-react';
+import { Sparkles, Smile, Syringe, Zap } from 'lucide-react';
 import { services } from '../data/portfolio';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -8,10 +8,10 @@ const Services: React.FC = () => {
   const { t } = useLanguage();
   
   const iconMap = {
-    Code,
-    Smartphone,
-    Building2,
-    Bot
+    Sparkles,
+    Smile,
+    Syringe,
+    Zap
   };
 
   const containerVariants = {
@@ -48,7 +48,7 @@ const Services: React.FC = () => {
         whileHover={{ y: -5 }}
       >
         <div className="mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
             <IconComponent size={32} className="text-white" />
           </div>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
         <ul className="space-y-2">
           {service.features.map((feature, index) => (
             <li key={index} className="flex items-center text-gray-700 dark:text-gray-300">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+              <div className="w-2 h-2 bg-gold-500 rounded-full mr-3"></div>
               {t(feature)}
             </li>
           ))}

@@ -11,12 +11,12 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = 'DevPaul - Full-Stack Developer',
-  description = 'Professional full-stack developer and UI/UX designer creating beautiful, functional, and user-friendly digital experiences. Specializing in React, Node.js, and modern web technologies.',
-  keywords = 'Paul Realpe, DevPaul, Full-Stack Developer, UI/UX Designer, React, Node.js, JavaScript, TypeScript, Web Development, Mobile Development',
-  author = 'Paul Realpe',
-  image = '/og-image.jpg',
-  url = 'https://co.devpaul.com'
+  title = 'Dra. Camila Muñoz - Armonización Orofacial',
+  description = 'Especialista en Armonización Orofacial, Rinomodelación, Labios Rusos y Rejuvenecimiento Facial.',
+  keywords = 'Dra. Camila Muñoz, Armonización Orofacial, Rinomodelación, Labios Rusos, Botox, Estética Facial',
+  author = 'Dra. Camila Muñoz',
+  image = '/logo_light.jpeg',
+  url = 'https://dracamilamunoz.com'
 }: SEOProps) {
   return (
     <Helmet>
@@ -34,7 +34,7 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="DevPaul Portfolio" />
+      <meta property="og:site_name" content="Dra. Camila Muñoz" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -42,11 +42,11 @@ export default function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@devpaul" />
+      <meta name="twitter:creator" content="@dracamilamunoz" />
 
       {/* Additional SEO */}
-      <meta name="theme-color" content="#1E1E1E" />
-      <meta name="msapplication-TileColor" content="#1E1E1E" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
       <link rel="manifest" href="/manifest.json" />
     </Helmet>

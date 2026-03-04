@@ -32,3 +32,6 @@ dist-ssr
 .firebase/
 .firebaserc
 firebase-debug.log
+
+/assets/
+firebase_web.ts

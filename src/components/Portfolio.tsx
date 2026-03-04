@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { ExternalLink, Filter } from 'lucide-react';
 import { getProjects } from '../data/portfolio';
 import { useLanguage } from '../contexts/LanguageContext';
 import type { Project } from '../types';
@@ -11,10 +11,9 @@ const Portfolio: React.FC = () => {
 
   const filters = [
     { id: 'all', label: t('portfolio.allProjects') },
-    { id: 'web', label: t('portfolio.webApps') },
-    { id: 'mobile', label: t('portfolio.mobileApps') },
-    { id: 'fullstack', label: t('portfolio.fullStack') },
-    { id: 'desktop', label: t('portfolio.desktopApps') }
+    { id: 'facial', label: t('portfolio.webApps') },
+    { id: 'labios', label: t('portfolio.mobileApps') },
+    { id: 'antiaging', label: t('portfolio.fullStack') }
   ];
 
   const allProjects = getProjects(t);
@@ -67,23 +66,12 @@ const Portfolio: React.FC = () => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors font-medium"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <ExternalLink size={18} />
-              </motion.a>
-            )}
-            {project.githubUrl && (
-              <motion.a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Github size={18} />
+                <span>Ver Caso</span>
               </motion.a>
             )}
           </div>
@@ -102,7 +90,7 @@ const Portfolio: React.FC = () => {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm rounded-full"
+              className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 text-sm rounded-full"
             >
               {tech}
             </span>
@@ -144,7 +132,7 @@ const Portfolio: React.FC = () => {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === filter.id
-                    ? 'bg-blue-600 text-white shadow-lg'
+                    ? 'bg-primary-600 text-white shadow-lg'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
                 whileHover={{ scale: 1.05 }}

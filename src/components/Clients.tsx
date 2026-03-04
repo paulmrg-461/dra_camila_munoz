@@ -40,14 +40,14 @@ const Clients: React.FC = () => {
         whileHover={{ y: -5, scale: 1.02 }}
       >
         <div className="flex items-center space-x-4 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <IconComponent size={24} className="text-white" />
           </div>
           <div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
               {client.name}
             </h3>
-            <span className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+            <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
               {client.category}
             </span>
           </div>
@@ -92,9 +92,9 @@ const Clients: React.FC = () => {
             variants={itemVariants}
             className="text-center mt-12"
           >
-            <div className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/20 px-6 py-3 rounded-full">
-              <Building2 size={20} className="text-blue-600 dark:text-blue-400" />
-              <span className="text-blue-700 dark:text-blue-300 font-medium">
+            <div className="inline-flex items-center space-x-2 bg-primary-50 dark:bg-primary-900/20 px-6 py-3 rounded-full">
+              <Building2 size={20} className="text-primary-600 dark:text-primary-400" />
+              <span className="text-primary-700 dark:text-primary-300 font-medium">
                 {t('clients.trustedBy')}
               </span>
             </div>

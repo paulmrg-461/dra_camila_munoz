@@ -130,8 +130,8 @@ const Chatbot: React.FC = () => {
     <>
       <motion.button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(59, 130, 246, 0.4)' }}
+        className="fixed bottom-6 right-6 p-4 bg-gradient-to-r from-primary-600 to-gold-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(197, 165, 114, 0.4)' }}
         whileTap={{ scale: 0.95 }}
         aria-label="Abrir chatbot"
       >
@@ -148,8 +148,8 @@ const Chatbot: React.FC = () => {
           >
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-2">
-                <MessageCircle className="text-blue-600" size={20} />
-                <h3 className="font-semibold text-gray-900 dark:text-white">{t('hero.chatTitle') || 'Chat con DevPaul'}</h3>
+                <MessageCircle className="text-primary-600" size={20} />
+                <h3 className="font-semibold text-gray-900 dark:text-white">{t('hero.chatTitle') || 'Chat con Dra. Camila'}</h3>
               </div>
               <button onClick={() => setOpen(false)} className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">✕</button>
             </div>
@@ -157,7 +157,7 @@ const Chatbot: React.FC = () => {
             <div className="p-4 h-96 overflow-y-auto space-y-4" ref={messagesContainerRef}>
               {messages.length === 0 && (
                 <motion.div variants={itemVariants} className="text-sm text-gray-600 dark:text-gray-300">
-                  {t('hero.chatIntro') || 'Pregúntame sobre proyectos, tecnologías, experiencia y si puedo ayudarte con tu idea.'}
+                  {t('hero.chatIntro') || 'Pregúntame sobre tratamientos, precios y disponibilidad.'}
                 </motion.div>
               )}
               {messages.map((m, idx) => (
@@ -170,7 +170,7 @@ const Chatbot: React.FC = () => {
                     className={
                       'inline-block max-w-[80%] px-3 py-2 text-sm ' +
                       (m.role === 'user'
-                        ? 'bg-blue-600 text-white rounded-2xl rounded-br-none ml-10'
+                        ? 'bg-primary-600 text-white rounded-2xl rounded-br-none ml-10'
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-2xl rounded-bl-none mr-10')
                     }
                   >

@@ -39,11 +39,11 @@ const Navigation: React.FC = () => {
             className="flex items-center space-x-2"
           >
             <img 
-              src="/devpaul_logo.jpeg?auto=compress&cs=tinysrgb&w=100" 
-              alt="DevPaul Logo" 
-              className="w-8 h-8 object-cover rounded-lg shadow-lg border-2 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+              src={isDark ? "/logo_light.jpeg" : "/logo_dark.jpeg"}
+              alt="Dra. Camila Muñoz Logo" 
+              className="w-10 h-10 object-cover rounded-full shadow-lg border-2 border-gold-500/20 hover:border-gold-500/40 transition-all duration-300"
             />
-            <span className="text-l font-bold text-gray-900 dark:text-white">DevPaul</span>
+            <span className="text-l font-bold text-gray-900 dark:text-white">Dra. Camila Muñoz</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -54,8 +54,8 @@ const Navigation: React.FC = () => {
                 onClick={() => handleNavClick(item.id)}
                 className={`relative px-2 py-2 text-sm font-small transition-colors ${
                   activeSection === item.id
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-primary-600 dark:text-primary-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600 dark:bg-primary-400"
                   />
                 )}
               </motion.button>

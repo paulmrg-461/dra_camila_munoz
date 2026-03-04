@@ -6,33 +6,37 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#fbf8eb',
+          100: '#f5eccb',
+          200: '#ebd696',
+          300: '#e0bf5e',
+          400: '#d7aa34',
+          500: '#bf901e', // Gold base
+          600: '#a37216',
+          700: '#825613',
+          800: '#6b4516',
+          900: '#5a3a17',
         },
         secondary: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
+          50: '#f6f6f6',
+          100: '#e7e7e7',
+          200: '#d1d1d1',
+          300: '#b0b0b0',
+          400: '#888888',
+          500: '#6d6d6d',
+          600: '#5d5d5d',
+          700: '#4f4f4f',
+          800: '#454545',
+          900: '#3d3d3d',
         },
+        gold: {
+            500: '#D4AF37',
+            600: '#C5A028',
+        }
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'heading': ['Inter', 'system-ui', 'sans-serif'],
+        'heading': ['Playfair Display', 'Inter', 'serif'], // More elegant for doctor
         'body': ['Roboto', 'system-ui', 'sans-serif'],
       },
       animation: {

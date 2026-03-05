@@ -49,8 +49,8 @@ describe('Services Component', () => {
   it('renders service cards', () => {
     renderServices();
     // Check for some service titles
-    expect(screen.getByText('Rinomodelación')).toBeDefined();
     expect(screen.getByText('Perfilado y Aumento de Labios')).toBeDefined();
     expect(screen.getByText('Toxina Botulínica')).toBeDefined();
+    expect(screen.getByText('Bioestimuladores de Colágeno')).toBeDefined();
   });
 });

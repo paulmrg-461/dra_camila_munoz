@@ -41,14 +41,21 @@ const Navigation: React.FC = () => {
           >
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-gold-400 dark:border-gold-600 shadow-md">
               <img 
-                src={isDark ? "/logo_light.jpeg" : "/logo_dark.jpeg"}
+                src={isDark ? "/hero.jpeg" : "/about.jpeg"}
                 alt="Dra. Camila Muñoz Logo" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="text-lg md:text-xl font-bold font-heading text-gray-900 dark:text-white tracking-wide">
+            <div className="relative w-48 mt-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src={isDark ? "/logo_dark.png" : "/logo_light.png"}
+                alt="Dra. Camila Muñoz Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            {/* <span className="text-lg md:text-xl font-bold font-heading text-gray-900 dark:text-white tracking-wide">
               Dra. Camila Muñoz
-            </span>
+            </span> */}
           </motion.div>
 
           {/* Desktop Navigation */}

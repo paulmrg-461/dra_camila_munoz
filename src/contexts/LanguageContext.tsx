@@ -81,19 +81,22 @@ const translations = {
     'services.rinomodelacion.feature2': 'Sin tiempo de baja',
     
     'services.labios.title': 'Perfilado y Aumento de Labios',
-    'services.labios.description': 'Labios hidratados, definidos y con el volumen deseado.',
-    'services.labios.feature1': 'Técnica Rusa',
-    'services.labios.feature2': 'Hidratación profunda',
+    'services.labios.description': 'Diseño labial de alta precisión.',
+    'services.labios.feature1': 'Labios definidos, hidratados y armónicos.',
+    'services.labios.feature2': 'Volumen elegante, nunca exagerado.',
+    'services.labios.feature3': 'Técnica personalizada según tu proporción facial.',
     
     'services.botox.title': 'Toxina Botulínica',
-    'services.botox.description': 'Previene y suaviza las arrugas de expresión.',
-    'services.botox.feature1': 'Frente y entrecejo',
-    'services.botox.feature2': 'Patas de gallo',
+    'services.botox.description': 'Elegancia en cada expresión.',
+    'services.botox.feature1': 'Suaviza líneas sin congelar tu esencia.',
+    'services.botox.feature2': 'Previene el envejecimiento con precisión experta.',
+    'services.botox.feature3': 'Logra una mirada fresca, descansada y naturalmente armoniosa.',
     
     'services.bioestimuladores.title': 'Bioestimuladores de Colágeno',
-    'services.bioestimuladores.description': 'Recupera la firmeza y juventud de tu piel.',
-    'services.bioestimuladores.feature1': 'Radiesse / Sculptra',
-    'services.bioestimuladores.feature2': 'Efecto lifting',
+    'services.bioestimuladores.description': 'No es volumen. Es estructura. Es calidad de piel.',
+    'services.bioestimuladores.feature1': 'Activa tu propio colágeno para una firmeza real.',
+    'services.bioestimuladores.feature2': 'Redefine contornos con efecto lifting sutil y progresivo.',
+    'services.bioestimuladores.feature3': 'Rejuvenece con distinción y naturalidad.',
     
     // Clients Section (Testimonios)
     'clients.title': 'Lo que dicen mis pacientes',
@@ -206,19 +209,22 @@ const translations = {
     'services.rinomodelacion.feature2': 'No downtime',
     
     'services.labios.title': 'Lip Profiling and Augmentation',
-    'services.labios.description': 'Hydrated, defined lips with desired volume.',
-    'services.labios.feature1': 'Russian Technique',
-    'services.labios.feature2': 'Deep hydration',
+    'services.labios.description': 'High precision lip design.',
+    'services.labios.feature1': 'Defined, hydrated, and harmonious lips.',
+    'services.labios.feature2': 'Elegant volume, never exaggerated.',
+    'services.labios.feature3': 'Personalized technique according to your facial proportions.',
     
     'services.botox.title': 'Botulinum Toxin',
-    'services.botox.description': 'Prevents and smooths expression wrinkles.',
-    'services.botox.feature1': 'Forehead and glabella',
-    'services.botox.feature2': 'Crow\'s feet',
+    'services.botox.description': 'Elegance in every expression.',
+    'services.botox.feature1': 'Softens lines without freezing your essence.',
+    'services.botox.feature2': 'Prevents aging with expert precision.',
+    'services.botox.feature3': 'Achieves a fresh, rested, and naturally harmonious look.',
     
     'services.bioestimuladores.title': 'Collagen Biostimulators',
-    'services.bioestimuladores.description': 'Recover the firmness and youth of your skin.',
-    'services.bioestimuladores.feature1': 'Radiesse / Sculptra',
-    'services.bioestimuladores.feature2': 'Lifting effect',
+    'services.bioestimuladores.description': 'It is not volume. It is structure. It is skin quality.',
+    'services.bioestimuladores.feature1': 'Activates your own collagen for real firmness.',
+    'services.bioestimuladores.feature2': 'Redefines contours with a subtle and progressive lifting effect.',
+    'services.bioestimuladores.feature3': 'Rejuvenates with distinction and naturalness.',
     
     // Clients Section (Testimonials)
     'clients.title': 'What my patients say',

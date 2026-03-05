@@ -43,31 +43,24 @@ export const getProjects = (t: (key: string) => string): Project[] => {
 export const services: Service[] = [
   {
     id: '1',
-    title: 'services.rinomodelacion.title',
-    description: 'services.rinomodelacion.description',
+    title: 'services.botox.title',
+    description: 'services.botox.description',
     icon: 'Sparkles',
-    features: ['services.rinomodelacion.feature1', 'services.rinomodelacion.feature2']
+    features: ['services.botox.feature1', 'services.botox.feature2', 'services.botox.feature3']
   },
   {
     id: '2',
-    title: 'services.labios.title',
-    description: 'services.labios.description',
-    icon: 'Smile',
-    features: ['services.labios.feature1', 'services.labios.feature2']
-  },
-  {
-    id: '3',
-    title: 'services.botox.title',
-    description: 'services.botox.description',
-    icon: 'Syringe',
-    features: ['services.botox.feature1', 'services.botox.feature2']
-  },
-  {
-    id: '4',
     title: 'services.bioestimuladores.title',
     description: 'services.bioestimuladores.description',
     icon: 'Activity',
-    features: ['services.bioestimuladores.feature1', 'services.bioestimuladores.feature2']
+    features: ['services.bioestimuladores.feature1', 'services.bioestimuladores.feature2', 'services.bioestimuladores.feature3']
+  },
+  {
+    id: '3',
+    title: 'services.labios.title',
+    description: 'services.labios.description',
+    icon: 'Smile',
+    features: ['services.labios.feature1', 'services.labios.feature2', 'services.labios.feature3']
   }
 ];
 

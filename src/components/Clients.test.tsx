@@ -23,6 +23,6 @@ describe('Clients Component', () => {
     );
 
     expect(screen.getByText(/Ana María/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Rinomodelación/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/Toxina Botulínica/i)[0]).toBeInTheDocument();
   });
 });

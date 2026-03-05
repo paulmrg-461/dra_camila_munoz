@@ -31,7 +31,7 @@ const translations = {
     // Hero Section
     'hero.title': 'Dra. Camila Muñoz',
     'hero.subtitle': 'Especialista en Armonización Orofacial',
-    'hero.technologies': 'Botox • Ácido Hialurónico • Rinomodelación • Labios Rusos • Bioestimuladores',
+    'hero.technologies': 'Toxina Botulínica • Bioestimuladores de Colágeno • Perfilado y Aumento de Labios',
     'hero.description': 'Transformo rostros realzando tu belleza natural mediante técnicas avanzadas de armonización orofacial. Mi enfoque combina ciencia y arte para lograr resultados estéticos, seguros y equilibrados.',
     'hero.getInTouch': 'Agendar Cita',
     'hero.downloadCV': 'Ver Tratamientos',
@@ -75,17 +75,6 @@ const translations = {
     'services.subtitle': 'Procedimientos mínimamente invasivos con resultados extraordinarios',
     
     // Services Details
-    'services.rinomodelacion.title': 'Rinomodelación',
-    'services.rinomodelacion.description': 'Modifica la forma de tu nariz sin cirugía.',
-    'services.rinomodelacion.feature1': 'Resultados inmediatos',
-    'services.rinomodelacion.feature2': 'Sin tiempo de baja',
-    
-    'services.labios.title': 'Perfilado y Aumento de Labios',
-    'services.labios.description': 'Diseño labial de alta precisión.',
-    'services.labios.feature1': 'Labios definidos, hidratados y armónicos.',
-    'services.labios.feature2': 'Volumen elegante, nunca exagerado.',
-    'services.labios.feature3': 'Técnica personalizada según tu proporción facial.',
-    
     'services.botox.title': 'Toxina Botulínica',
     'services.botox.description': 'Elegancia en cada expresión.',
     'services.botox.feature1': 'Suaviza líneas sin congelar tu esencia.',
@@ -97,6 +86,12 @@ const translations = {
     'services.bioestimuladores.feature1': 'Activa tu propio colágeno para una firmeza real.',
     'services.bioestimuladores.feature2': 'Redefine contornos con efecto lifting sutil y progresivo.',
     'services.bioestimuladores.feature3': 'Rejuvenece con distinción y naturalidad.',
+    
+    'services.labios.title': 'Perfilado y Aumento de Labios',
+    'services.labios.description': 'Diseño labial de alta precisión.',
+    'services.labios.feature1': 'Labios definidos, hidratados y armónicos.',
+    'services.labios.feature2': 'Volumen elegante, nunca exagerado.',
+    'services.labios.feature3': 'Técnica personalizada según tu proporción facial.',
     
     // Clients Section (Testimonios)
     'clients.title': 'Lo que dicen mis pacientes',
@@ -157,9 +152,9 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
-    'hero.title': 'Hi, I am Dr. Camila Muñoz',
+    'hero.title': 'Dr. Camila Muñoz',
     'hero.subtitle': 'Orofacial Harmonization Specialist',
-    'hero.technologies': 'Botox • Hyaluronic Acid • Rhinomodeling • Russian Lips • Biostimulators',
+    'hero.technologies': 'Botulinum Toxin • Collagen Biostimulators • Lip Profiling and Augmentation',
     'hero.description': 'I transform faces enhancing your natural beauty through advanced orofacial harmonization techniques. My approach combines science and art to achieve aesthetic, safe, and balanced results.',
     'hero.getInTouch': 'Book Appointment',
     'hero.downloadCV': 'View Treatments',
@@ -203,17 +198,6 @@ const translations = {
     'services.subtitle': 'Minimally invasive procedures with extraordinary results',
     
     // Services Details
-    'services.rinomodelacion.title': 'Rhinomodeling',
-    'services.rinomodelacion.description': 'Modify the shape of your nose without surgery.',
-    'services.rinomodelacion.feature1': 'Immediate results',
-    'services.rinomodelacion.feature2': 'No downtime',
-    
-    'services.labios.title': 'Lip Profiling and Augmentation',
-    'services.labios.description': 'High precision lip design.',
-    'services.labios.feature1': 'Defined, hydrated, and harmonious lips.',
-    'services.labios.feature2': 'Elegant volume, never exaggerated.',
-    'services.labios.feature3': 'Personalized technique according to your facial proportions.',
-    
     'services.botox.title': 'Botulinum Toxin',
     'services.botox.description': 'Elegance in every expression.',
     'services.botox.feature1': 'Softens lines without freezing your essence.',
@@ -225,6 +209,12 @@ const translations = {
     'services.bioestimuladores.feature1': 'Activates your own collagen for real firmness.',
     'services.bioestimuladores.feature2': 'Redefines contours with a subtle and progressive lifting effect.',
     'services.bioestimuladores.feature3': 'Rejuvenates with distinction and naturalness.',
+    
+    'services.labios.title': 'Lip Profiling and Augmentation',
+    'services.labios.description': 'High precision lip design.',
+    'services.labios.feature1': 'Defined, hydrated, and harmonious lips.',
+    'services.labios.feature2': 'Elegant volume, never exaggerated.',
+    'services.labios.feature3': 'Personalized technique according to your facial proportions.',
     
     // Clients Section (Testimonials)
     'clients.title': 'What my patients say',

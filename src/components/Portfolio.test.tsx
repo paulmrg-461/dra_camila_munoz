@@ -66,22 +66,23 @@ describe('Portfolio Component', () => {
   it('renders project cards', () => {
     renderPortfolio();
     // Check for some project titles (from translations)
-    expect(screen.getByText('Rinomodelación Sin Cirugía')).toBeDefined();
-    // Labios Rusos appears in title and tags, so we use getAllByText
-    expect(screen.getAllByText('Labios Rusos').length).toBeGreaterThan(0);
+    // Toxina Botulínica appears in title and tags, so we use getAllByText
+    expect(screen.getAllByText('Toxina Botulínica').length).toBeGreaterThan(0);
+    // Labios appears in title and tags, so we use getAllByText
+    expect(screen.getAllByText('Perfilado y Aumento de Labios').length).toBeGreaterThan(0);
   });
 
   it('filters projects when clicking a filter', async () => {
     renderPortfolio();
-    const labiosFilter = screen.getByText('Labios');
+    const labiosFilter = screen.getByRole('button', { name: 'Labios' });
     fireEvent.click(labiosFilter);
     
-    // Should show Labios Rusos
-    expect(screen.getAllByText('Labios Rusos').length).toBeGreaterThan(0);
+    // Should show Labios project
+    expect(screen.getAllByText('Perfilado y Aumento de Labios').length).toBeGreaterThan(0);
     
-    // Should NOT show Rinomodelación (facial)
+    // Should NOT show Toxina Botulínica (facial)
     // Use queryByText to check for absence
-    expect(screen.queryByText('Rinomodelación Sin Cirugía')).toBeNull();
+    expect(screen.queryByText('Toxina Botulínica')).toBeNull();
   });
 
   it('renders "Ver Caso" button', () => {

@@ -8,27 +8,27 @@ type ProjectData = Omit<Project, 'title' | 'description'> & {
 const projectData: ProjectData[] = [
   {
     id: '1',
-    slug: 'case1',
-    image: '/logo_light.jpeg', // Placeholder
-    technologies: ['Rinomodelación', 'Ácido Hialurónico'],
+    slug: 'botox',
+    image: '/treat1.jpeg',
+    technologies: ['Toxina Botulínica', 'Rejuvenecimiento'],
     liveUrl: '#',
     category: 'facial'
   },
   {
     id: '2',
-    slug: 'case2',
-    image: '/logo_light.jpeg', // Placeholder
-    technologies: ['Labios Rusos', 'Volumen'],
+    slug: 'bioestimuladores',
+    image: '/treat2.jpeg',
+    technologies: ['Bioestimuladores', 'Colágeno', 'Lifting'],
     liveUrl: '#',
-    category: 'labios'
+    category: 'facial'
   },
   {
     id: '3',
-    slug: 'case3',
-    image: '/logo_light.jpeg', // Placeholder
-    technologies: ['Botox', 'Rejuvenecimiento'],
+    slug: 'labios',
+    image: '/treat1.jpeg',
+    technologies: ['Ácido Hialurónico', 'Labios', 'Perfilado'],
     liveUrl: '#',
-    category: 'antiaging'
+    category: 'labios'
   },
 ];
 
@@ -114,13 +114,13 @@ const clientData: ClientData[] = [
   {
     id: '2',
     slug: 'patient2',
-    name: 'Carlos R.',
+    name: 'Sofía Quintero',
     icon: UserCheck
   },
   {
     id: '3',
     slug: 'patient3',
-    name: 'Sofía L.',
+    name: 'Javier Pérez',
     icon: UserCheck
   }
 ];

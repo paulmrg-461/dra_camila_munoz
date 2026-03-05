@@ -63,12 +63,14 @@ const translations = {
     'portfolio.viewCase': 'Ver Caso',
 
     // Projects (Casos)
-    'project.case1.title': 'Rinomodelación Sin Cirugía',
-    'project.case1.description': 'Corrección de perfil nasal con ácido hialurónico. Resultado inmediato y recuperación rápida.',
-    'project.case2.title': 'Labios Rusos',
-    'project.case2.description': 'Aumento de volumen y definición de arco de cupido con técnica rusa para un acabado plano y elevado.',
-    'project.case3.title': 'Rejuvenecimiento Facial Completo',
-    'project.case3.description': 'Combinación de toxina botulínica y bioestimuladores para suavizar arrugas y mejorar la calidad de la piel.',
+    'project.botox.title': 'Toxina Botulínica',
+    'project.botox.description': 'Suaviza líneas sin congelar tu esencia. Logra una mirada fresca, descansada y naturalmente armoniosa.',
+    
+    'project.bioestimuladores.title': 'Bioestimuladores de Colágeno',
+    'project.bioestimuladores.description': 'Activa tu propio colágeno para una firmeza real. Redefine contornos con efecto lifting sutil y progresivo.',
+    
+    'project.labios.title': 'Perfilado y Aumento de Labios',
+    'project.labios.description': 'Diseño labial de alta precisión. Labios definidos, hidratados y armónicos con volumen elegante.',
     
     // Services Section
     'services.title': 'Mis Tratamientos',
@@ -97,12 +99,12 @@ const translations = {
     'clients.title': 'Lo que dicen mis pacientes',
     'clients.subtitle': 'La satisfacción de mis pacientes es mi mayor carta de presentación.',
     'clients.trustedBy': 'Pacientes felices',
-    'clients.patient1.description': 'La rinomodelación cambió mi vida. La Dra. Camila fue súper profesional y el resultado es increíblemente natural. ¡Me siento más segura!',
-    'clients.patient1.treatment': 'Rinomodelación',
-    'clients.patient2.description': 'Tenía miedo de que mis labios se vieran falsos, pero la técnica de labios rusos es perfecta. Volumen justo y forma hermosa. Recomendadísima.',
-    'clients.patient2.treatment': 'Labios Rusos',
-    'clients.patient3.description': 'Me hice un tratamiento full face y rejuvenecí 10 años. La atención es excelente y te explican todo con detalle.',
-    'clients.patient3.treatment': 'Full Face',
+    'clients.patient1.description': 'Mi rostro luce más descansado y fresco sin perder mi expresión natural. ¡Me encanta!',
+    'clients.patient1.treatment': 'Toxina Botulínica',
+    'clients.patient2.description': 'Tenía miedo de que se vieran falsos, pero el resultado es increíblemente natural y elegante.',
+    'clients.patient2.treatment': 'Perfilado de Labios',
+    'clients.patient3.description': 'La firmeza de mi piel mejoró notablemente. Es el mejor tratamiento que me he realizado.',
+    'clients.patient3.treatment': 'Bioestimuladores',
     
     // Contact Section
     'contact.title': 'Agenda tu Cita',
@@ -122,8 +124,8 @@ const translations = {
     'contact.messageRequired': 'El mensaje es requerido',
     'contact.namePlaceholder': 'Tu nombre',
     'contact.emailPlaceholder': 'tu@email.com',
-    'contact.phonePlaceholder': '+56 9 1234 5678',
-    'contact.subjectPlaceholder': 'Ej: Rinomodelación',
+    'contact.phonePlaceholder': '+57 310 4466710',
+    'contact.subjectPlaceholder': 'Ej: Toxina Botulínica',
     'contact.messagePlaceholder': 'Hola Dra., quisiera información sobre...',
     'contact.thankYou': '¡Gracias por tu mensaje! Te responderé pronto.',
     'contact.sending': 'Enviando...',
@@ -135,7 +137,7 @@ const translations = {
     'footer.contact': 'Contacto',
     'footer.follow': 'Sígueme',
     'footer.address': 'Av. Kennedy 5488, Of 202, Vitacura',
-    'footer.phone': '+56 9 1234 5678',
+    'footer.phone': '+57 310 4466710',
     'footer.email': 'contacto@dracamilamunoz.com',
     'footer.rights': '© 2024 Dra. Camila Muñoz. Todos los derechos reservados.',
     'footer.schedule': 'Horario',
@@ -186,12 +188,14 @@ const translations = {
     'portfolio.viewCase': 'View Case',
 
     // Projects (Cases)
-    'project.case1.title': 'Non-Surgical Rhinomodeling',
-    'project.case1.description': 'Nasal profile correction with hyaluronic acid. Immediate result and quick recovery.',
-    'project.case2.title': 'Russian Lips',
-    'project.case2.description': 'Volume increase and cupid\'s bow definition with Russian technique for a flat and elevated finish.',
-    'project.case3.title': 'Full Facial Rejuvenation',
-    'project.case3.description': 'Combination of botulinum toxin and biostimulators to smooth wrinkles and improve skin quality.',
+    'project.botox.title': 'Botulinum Toxin',
+    'project.botox.description': 'Softens lines without freezing your essence. Achieves a fresh, rested, and naturally harmonious look.',
+    
+    'project.bioestimuladores.title': 'Collagen Biostimulators',
+    'project.bioestimuladores.description': 'Activates your own collagen for real firmness. Redefines contours with a subtle and progressive lifting effect.',
+    
+    'project.labios.title': 'Lip Profiling and Augmentation',
+    'project.labios.description': 'High precision lip design. Defined, hydrated, and harmonious lips with elegant volume.',
     
     // Services Section
     'services.title': 'My Treatments',
@@ -220,12 +224,12 @@ const translations = {
     'clients.title': 'What my patients say',
     'clients.subtitle': 'The satisfaction of my patients is my greatest letter of introduction.',
     'clients.trustedBy': 'Happy patients',
-    'clients.patient1.description': 'Rhinomodeling changed my life. Dr. Camila was super professional and the result is incredibly natural. I feel more confident!',
-    'clients.patient1.treatment': 'Rhinomodeling',
-    'clients.patient2.description': 'I was afraid my lips would look fake, but the Russian lips technique is perfect. Just the right volume and beautiful shape. Highly recommended.',
-    'clients.patient2.treatment': 'Russian Lips',
-    'clients.patient3.description': 'I had a full face treatment and look 10 years younger. The attention is excellent and they explain everything in detail.',
-    'clients.patient3.treatment': 'Full Face',
+    'clients.patient1.description': 'My face looks more rested and fresh without losing my natural expression. I love it!',
+    'clients.patient1.treatment': 'Botulinum Toxin',
+    'clients.patient2.description': 'I was afraid they would look fake, but the result is incredibly natural and elegant.',
+    'clients.patient2.treatment': 'Lip Profiling',
+    'clients.patient3.description': 'My skin firmness improved noticeably. It is the best treatment I have ever had.',
+    'clients.patient3.treatment': 'Biostimulators',
     
     // Contact Section
     'contact.title': 'Book Appointment',
@@ -245,8 +249,8 @@ const translations = {
     'contact.messageRequired': 'Message is required',
     'contact.namePlaceholder': 'Your Name',
     'contact.emailPlaceholder': 'your@email.com',
-    'contact.phonePlaceholder': '+1 234 567 8900',
-    'contact.subjectPlaceholder': 'Ex: Rhinomodeling',
+    'contact.phonePlaceholder': '+57 310 4466710',
+    'contact.subjectPlaceholder': 'Ex: Botulinum Toxin',
     'contact.messagePlaceholder': 'Hello Dr., I would like information about...',
     'contact.thankYou': 'Thanks for your message! I will reply soon.',
     'contact.sending': 'Sending...',
@@ -258,7 +262,7 @@ const translations = {
     'footer.contact': 'Contact',
     'footer.follow': 'Follow Me',
     'footer.address': 'Av. Kennedy 5488, Of 202, Vitacura',
-    'footer.phone': '+56 9 1234 5678',
+    'footer.phone': '+57 310 4466710',
     'footer.email': 'contact@dracamilamunoz.com',
     'footer.rights': '© 2024 Dr. Camila Muñoz. All rights reserved.',
     'footer.schedule': 'Schedule',

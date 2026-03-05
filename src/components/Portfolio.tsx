@@ -109,7 +109,7 @@ const Portfolio: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="max-w-7xl mx-auto"
         >
-          <div className="text-center mb-16">
+          <div className="text-center mb-4" >
             <motion.h2 
               className="text-3xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
               variants={itemVariants}
@@ -130,7 +130,7 @@ const Portfolio: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-4 mb-16"
+            className="flex flex-wrap justify-center gap-4 mb-8"
           >
             {filters.map((filter) => (
               <button

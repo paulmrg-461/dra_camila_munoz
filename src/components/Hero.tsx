@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="relative order-1 md:order-2 mb-8 md:mb-0"
           >
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+            <div className="relative w-72 h-96 sm:w-96 sm:h-[32rem]">
               <div className="absolute inset-0 bg-gradient-to-tr from-gold-200 to-gold-300 dark:from-gold-900 dark:to-gold-800 rounded-full blur-3xl opacity-30 animate-pulse" />
               <motion.img
                 src="/hero.jpeg"

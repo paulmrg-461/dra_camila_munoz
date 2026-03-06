@@ -16,8 +16,9 @@ describe('Hero Component', () => {
       </LanguageProvider>
     );
 
-    // Expect to find the new title
-    expect(screen.getByText(/Dra\. Camila Muñoz/i)).toBeInTheDocument();
+    // Expect to find the new title parts
+    expect(screen.getByText(/Dra\./i)).toBeInTheDocument();
+    expect(screen.getByText(/Camila Muñoz/i)).toBeInTheDocument();
     
     // Expect to find the specialization
     const elements = screen.getAllByText(/Armonización Orofacial/i);

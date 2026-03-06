@@ -24,4 +24,18 @@ describe('Hero Component', () => {
     const elements = screen.getAllByText(/Armonización Orofacial/i);
     expect(elements.length).toBeGreaterThan(0);
   });
+
+  it('renders social media links correctly', () => {
+    render(
+      <LanguageProvider>
+        <Hero />
+      </LanguageProvider>
+    );
+
+    const instagramLink = screen.getByRole('link', { name: /instagram/i });
+    expect(instagramLink).toHaveAttribute('href', 'https://www.instagram.com/dracamilamp/');
+
+    const whatsappLink = screen.getByRole('link', { name: /whatsapp/i });
+    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/573104466710');
+  });
 });

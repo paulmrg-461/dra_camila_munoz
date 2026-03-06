@@ -107,7 +107,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="grid sm:grid-cols-1 gap-6 mt-8">
-                <div>
+                {/* <div>
                   <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <span className="w-8 h-1 bg-gold-500 rounded-full"></span>
                     {t('about.specialization')}
@@ -117,7 +117,7 @@ const About: React.FC = () => {
                         <CredentialCard key={cred.id} credential={cred} />
                      ))}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="pt-6 border-t border-gray-100 dark:border-gray-800">
                    <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">

@@ -37,13 +37,13 @@ const Footer: React.FC = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
+              <a href="https://www.instagram.com/dracamilamp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
+              <a href="https://wa.me/573104466710" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
                 <MessageCircle size={20} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
+              <a href="https://www.facebook.com/mariancamila.munozperez" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
                 <Facebook size={20} />
               </a>
             </div>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
           
           <motion.button
             onClick={scrollToTop}
-            className="p-3 bg-gradient-to-r from-gold-500 to-gold-700 hover:from-gold-600 hover:to-gold-800 rounded-full text-white shadow-lg transition-all"
+            className="mr-8 p-3 bg-gradient-to-r from-gold-500 to-gold-700 hover:from-gold-600 hover:to-gold-800 rounded-full text-white shadow-lg transition-all"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Scroll to top"

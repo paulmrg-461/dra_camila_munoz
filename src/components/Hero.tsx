@@ -7,8 +7,8 @@ const Hero: React.FC = () => {
   const { t } = useLanguage();
   
   const socialLinks = [
-    { icon: Instagram, href: 'https://www.instagram.com/dracamilamunoz', label: 'Instagram' },
-    { icon: MessageCircle, href: 'https://wa.me/573000000000', label: 'WhatsApp' },
+    { icon: Instagram, href: 'https://www.instagram.com/dracamilamp/', label: 'Instagram' },
+    { icon: MessageCircle, href: 'https://wa.me/573104466710', label: 'WhatsApp' },
     { icon: Mail, href: 'mailto:contacto@dracamilamunoz.com', label: 'Email' }
   ];
 
@@ -122,6 +122,7 @@ const Hero: React.FC = () => {
                   className="text-gray-400 hover:text-gold-500 dark:hover:text-gold-400 transition-colors"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
+                  aria-label={link.label}
                 >
                   <link.icon size={24} />
                 </motion.a>

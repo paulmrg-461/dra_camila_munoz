@@ -44,8 +44,8 @@ const About: React.FC = () => {
          credential.category === 'certification' ? <Award size={20} /> : <Heart size={20} />}
       </div>
       <div>
-        <h5 className="font-semibold text-gray-900 dark:text-white font-heading">{credential.title}</h5>
-        <p className="text-sm text-gray-600 dark:text-gray-400">{credential.institution}</p>
+        <h5 className="font-semibold text-gray-900 dark:text-white font-heading">{t(credential.title)}</h5>
+        <p className="text-sm text-gray-600 dark:text-gray-400">{t(credential.institution)}</p>
         {credential.year && <span className="text-xs text-gold-500 font-medium mt-1 block">{credential.year}</span>}
       </div>
     </motion.div>
@@ -76,7 +76,7 @@ const About: React.FC = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 max-w-xs">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-600 to-gold-400 mb-2">
-                  +5
+                  +3
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 font-medium">
                   {t('about.yearsExperience')}
@@ -87,11 +87,11 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-8 order-1 lg:order-2">
               <div>
                 <motion.h2 
-                  className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+                  className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-4"
                   variants={itemVariants}
                 >
                   {t('about.title')}
-                  <span className="block text-2xl md:text-3xl text-gold-600 dark:text-gold-500 mt-2 font-light">
+                  <span className="block text-xl md:text-2xl text-gold-600 dark:text-gold-500 mt-2 font-light italic">
                     {t('about.subtitle')}
                   </span>
                 </motion.h2>
@@ -107,7 +107,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="grid sm:grid-cols-1 gap-6 mt-8">
-                {/* <div>
+                <div>
                   <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <span className="w-8 h-1 bg-gold-500 rounded-full"></span>
                     {t('about.specialization')}
@@ -117,7 +117,7 @@ const About: React.FC = () => {
                         <CredentialCard key={cred.id} credential={cred} />
                      ))}
                   </div>
-                </div> */}
+                </div>
 
                 <div className="pt-6 border-t border-gray-100 dark:border-gray-800">
                    <h4 className="text-lg font-semibold font-heading text-gray-900 dark:text-white mb-6 flex items-center gap-2">
@@ -127,7 +127,7 @@ const About: React.FC = () => {
                    <div className="flex flex-wrap gap-4">
                       {values.map((val) => (
                         <span key={val.id} className="px-4 py-2 bg-gold-50 dark:bg-gold-900/20 text-gold-700 dark:text-gold-300 rounded-full text-sm font-medium border border-gold-100 dark:border-gold-800/30">
-                           {val.title}
+                           {t(val.title)}
                         </span>
                       ))}
                    </div>
@@ -139,7 +139,7 @@ const About: React.FC = () => {
                 variants={itemVariants}
               >
                 <div>
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">+1000</div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">+100</div>
                   <div className="text-sm text-gray-500 dark:text-gray-400">{t('about.patientsTreated')}</div>
                 </div>
                 <div>

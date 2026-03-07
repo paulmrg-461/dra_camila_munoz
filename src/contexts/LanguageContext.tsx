@@ -42,16 +42,26 @@ const translations = {
     'chat.thinking': 'Pensando...',
     
     // About Section
-    'about.title': 'Sobre la Dra. Camila',
-    'about.subtitle': 'Pasión por la estética y compromiso con la excelencia médica',
-    'about.description1': 'Soy Odontóloga especialista en Armonización Orofacial, dedicada a resaltar la belleza natural de mis pacientes. Con años de experiencia y formación continua, ofrezco tratamientos seguros y personalizados.',
-    'about.description2': 'Mi filosofía se basa en la "Naturalidad Estética", buscando siempre resultados que armonicen con las facciones del paciente sin perder su esencia. Utilizo productos de la más alta calidad y las últimas técnicas del mercado.',
+    'about.title': 'Dra. Camila Muñoz',
+    'about.subtitle': 'Donde la ciencia y el arte crean belleza.',
+    'about.description1': 'Odontóloga registrada ante el Colegio Odontológico Colombiano y especialista en Armonización Orofacial por UNIFAZ – Faculdade Ziroldo, Brasil.',
+    'about.description2': 'Mi filosofía de trabajo se basa en resaltar la belleza natural de cada paciente a través de procedimientos seguros, precisos y personalizados. Combino ciencia, estética y técnicas avanzadas para lograr resultados elegantes, armónicos y naturales.',
     'about.description3': 'Cada rostro es único, y por ello, cada tratamiento comienza con un análisis facial detallado para diseñar un plan a medida que cumpla con tus expectativas y mejore tu confianza.',
     'about.patientsTreated': 'Pacientes Atendidos',
     'about.satisfaction': 'Satisfacción',
     'about.yearsExperience': 'Años de Experiencia',
     'about.specialization': 'Formación Académica',
     'about.values': 'Valores y Seguridad',
+    
+    // Credentials
+    'about.cred.odontologa': 'Odontóloga',
+    'about.cred.coc': 'Colegio Odontológico Colombiano',
+    'about.cred.especialista': 'Especialista en Armonización Orofacial',
+    'about.cred.unifaz': 'UNIFAZ – Faculdade Ziroldo, Brasil',
+    'about.cred.seguridad': 'Seguridad del Paciente',
+    'about.cred.protocolos': 'Protocolos de Excelencia',
+    'about.cred.etica': 'Ética y Estética Natural',
+    'about.cred.compromiso': 'Compromiso Médico',
     
     // Portfolio Section (Casos)
     'portfolio.title': 'Casos de Éxito',
@@ -167,16 +177,26 @@ const translations = {
     'chat.thinking': 'Thinking...',
     
     // About Section
-    'about.title': 'About Dr. Camila',
-    'about.subtitle': 'Passion for aesthetics and commitment to medical excellence',
-    'about.description1': 'I am a Dentist specialized in Orofacial Harmonization, dedicated to highlighting the natural beauty of my patients. With years of experience and continuous training, I offer safe and personalized treatments.',
-    'about.description2': 'My philosophy is based on "Aesthetic Naturalness", always seeking results that harmonize with the patient\'s features without losing their essence. I use the highest quality products and the latest techniques in the market.',
+    'about.title': 'Dr. Camila Muñoz',
+    'about.subtitle': 'Where science and art create beauty.',
+    'about.description1': 'Registered Dentist with the Colombian Dental College and Orofacial Harmonization specialist by UNIFAZ – Faculdade Ziroldo, Brazil.',
+    'about.description2': 'My work philosophy is based on highlighting the natural beauty of each patient through safe, precise, and personalized procedures. I combine science, aesthetics, and advanced techniques to achieve elegant, harmonious, and natural results.',
     'about.description3': 'Each face is unique, and therefore, each treatment begins with a detailed facial analysis to design a custom plan that meets your expectations and improves your confidence.',
     'about.patientsTreated': 'Patients Treated',
     'about.satisfaction': 'Satisfaction',
     'about.yearsExperience': 'Years Experience',
     'about.specialization': 'Academic Credentials',
     'about.values': 'Values & Safety',
+
+    // Credentials
+    'about.cred.odontologa': 'Dentist',
+    'about.cred.coc': 'Colombian Dental College',
+    'about.cred.especialista': 'Orofacial Harmonization Specialist',
+    'about.cred.unifaz': 'UNIFAZ – Faculdade Ziroldo, Brazil',
+    'about.cred.seguridad': 'Patient Safety',
+    'about.cred.protocolos': 'Excellence Protocols',
+    'about.cred.etica': 'Ethics & Natural Aesthetics',
+    'about.cred.compromiso': 'Medical Commitment',
 
     // Portfolio Section (Cases)
     'portfolio.title': 'Success Stories',

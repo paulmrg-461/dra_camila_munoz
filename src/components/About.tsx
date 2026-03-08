@@ -64,13 +64,13 @@ const About: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={itemVariants}
-              className="relative order-2 lg:order-1"
+              className="relative order-2 lg:order-1 px-4 sm:px-0"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gold-100 to-gold-200 dark:from-gold-900/20 dark:to-gold-800/20 rounded-3xl transform -rotate-3 scale-105" />
               <motion.img
                 src="/about.jpeg"
                 alt="Dra. Camila Muñoz"
-                className="relative w-full h-[600px] object-cover rounded-3xl shadow-2xl"
+                className="relative w-full h-[400px] sm:h-[600px] object-cover rounded-3xl shadow-2xl"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.5 }}
               />

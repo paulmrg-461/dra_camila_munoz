@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-black dark:to-gray-900 transition-colors duration-500">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-black dark:to-gray-900 transition-colors duration-500 pt-20 pb-10 sm:pt-32 sm:pb-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="relative order-1 md:order-2 mb-8 md:mb-0"
+            className="relative order-1 md:order-2 mb-4 md:mb-0 p-4"
           >
             <div className="relative w-72 h-96 sm:w-96 sm:h-[32rem]">
               <div className="absolute inset-0 bg-gradient-to-tr from-gold-200 to-gold-300 dark:from-gold-900 dark:to-gold-800 rounded-full blur-3xl opacity-30 animate-pulse" />

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Mail, Instagram, MessageCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -88,18 +89,18 @@ const Hero: React.FC = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start"
             >
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={() => smoothScrollTo('contact')}
                 className="px-8 py-3 bg-gradient-to-r from-gold-500 to-gold-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:from-gold-600 hover:to-gold-700 transition-all flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Mail size={18} />
                 <span>{t('hero.getInTouch')}</span>
-              </motion.a>
+              </motion.button>
               
               <motion.button
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => smoothScrollTo('services')}
                 className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-medium shadow-md hover:shadow-lg transition-all flex items-center gap-2 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

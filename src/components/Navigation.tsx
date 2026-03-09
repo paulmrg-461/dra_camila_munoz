@@ -22,8 +22,11 @@ const Navigation: React.FC = () => {
   ];
 
   const handleNavClick = (sectionId: string) => {
-    smoothScrollTo(sectionId);
     setIsMenuOpen(false);
+    // Allow the menu to start closing before scrolling
+    setTimeout(() => {
+      smoothScrollTo(sectionId);
+    }, 100);
   };
 
   return (

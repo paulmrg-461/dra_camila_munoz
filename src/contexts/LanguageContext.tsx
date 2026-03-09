@@ -148,8 +148,8 @@ const translations = {
     'footer.follow': 'Sígueme',
     'footer.address': 'Cra. 97a #45-17, Cali Valle',
     'footer.phone': '+57 310 4466710',
-    'footer.email': 'contacto@dracamilamunoz.com',
-    'footer.rights': '© 2024 Dra. Camila Muñoz. Todos los derechos reservados.',
+    'footer.email': 'munozdracamila@gmail.com',
+    'footer.rights': '© 2026 Dra. Camila Muñoz. Todos los derechos reservados.',
     'footer.schedule': 'Horario',
     'footer.hours': 'Lunes a Viernes: 9:00 - 19:00',
     'footer.hoursSat': 'Sábados: 10:00 - 14:00'

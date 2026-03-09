@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/dracamilamp/', label: 'Instagram' },
     { icon: MessageCircle, href: 'https://wa.me/573104466710', label: 'WhatsApp' },
-    { icon: Mail, href: 'mailto:contacto@dracamilamunoz.com', label: 'Email' }
+    { icon: Mail, href: 'mailto:munozdracamila@gmail.com', label: 'Email' }
   ];
 
   const containerVariants: Variants = {
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-black dark:to-gray-900 transition-colors duration-500 pt-20 pb-10 sm:pt-32 sm:pb-0">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white dark:from-black dark:to-gray-900 transition-colors duration-500 pt-20 pb-10 sm:pt-16 sm:pb-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading text-gray-900 dark:text-white mb-6 leading-tight"
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading text-gray-900 dark:text-white mb-2 leading-tight"
             >
               {t('hero.title').split('Camila Muñoz')[0]}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">

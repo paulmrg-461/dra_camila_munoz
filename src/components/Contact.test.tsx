@@ -22,7 +22,7 @@ describe('Contact Component', () => {
       </LanguageProvider>
     );
 
-    expect(screen.getByText(/contacto@dracamilamunoz.com/i)).toBeInTheDocument();
+    expect(screen.getByText(/munozdracamila@gmail.com/i)).toBeInTheDocument();
     expect(screen.getByText(/WhatsApp/i)).toBeInTheDocument();
   });
 

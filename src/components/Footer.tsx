@@ -2,11 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUp, Mail, Phone, MapPin, Instagram, MessageCircle, Facebook } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { smoothScrollTo } from '../utils/smoothScroll';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const { isDark } = useTheme();
   
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,16 +29,18 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white pt-16 pb-8 border-t border-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
           {/* Brand Column */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-gold-600">
-              Dra. Camila Muñoz
-            </h3>
+          <div className="space-y-0">
+            <img 
+              src={isDark ? "/logo_dark.png" : "/logo_light.png"}
+              alt="Dra. Camila Muñoz Logo" 
+              className="w-48 h-auto object-contain"
+            />
             <p className="text-gray-400 text-sm leading-relaxed">
               {t('hero.subtitle')}
             </p>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-6">
               <a href="https://www.instagram.com/dracamilamp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 bg-gray-900 rounded-full hover:bg-gold-900/30 hover:text-gold-400 transition-colors">
                 <Instagram size={20} />
               </a>
@@ -81,7 +85,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone size={18} className="text-gold-500 shrink-0" />
-                <a href={`tel:${t('footer.phone').replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                <a href={`tel:${t('footer.phone').replace(/\\s/g, '')}`} className="hover:text-white transition-colors">
                   {t('footer.phone')}
                 </a>
               </li>
